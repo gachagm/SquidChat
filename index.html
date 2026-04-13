@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SquidChat 🦑</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🦑 SquidChat</h1>
+  <a href="connect.html">Connect</a>
+</div>
+
+<div class="container">
+
+  <div class="sidebar">
+    <button onclick="switchRoom('lobby')"># lobby</button>
+    <button onclick="switchRoom('ranked')"># ranked</button>
+    <button onclick="switchRoom('fashion')"># fashion</button>
+    <button onclick="switchRoom('splatfest')"># splatfest</button>
+  </div>
+
+  <div class="chat-area">
+    <div id="chat"></div>
+
+    <div class="input-area">
+      <input id="username" placeholder="Dein Name (Inkling…)" />
+      <input id="msg" placeholder="Nachricht..." />
+      <button onclick="send()">Senden</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
