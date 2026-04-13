@@ -1,191 +1,95 @@
-/* =========================
-   GLOBAL RESET (WICHTIG)
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
 }
 
 body {
-  background: #0b0b0f;
+  background: #0b0b10;
   color: white;
   overflow: hidden;
 }
 
-/* =========================
-   BACKGROUND (KEIN BUG MEHR)
-========================= */
-.bg-animation {
+.bg {
   position: fixed;
   inset: 0;
   z-index: -1;
-  pointer-events: none;
-
   background:
     radial-gradient(circle at 20% 20%, #ff00aa33, transparent 40%),
-    radial-gradient(circle at 80% 30%, #00ffcc33, transparent 45%),
-    radial-gradient(circle at 50% 80%, #7a00ff22, transparent 50%);
+    radial-gradient(circle at 80% 30%, #00ffcc33, transparent 45%);
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding: 15px 20px;
-
-  background: linear-gradient(90deg, #ff00aa, #00ffcc);
+  padding: 15px;
+  background: linear-gradient(90deg,#ff00aa,#00ffcc);
   color: black;
-
   font-weight: bold;
 }
 
-header h1 {
-  font-size: 20px;
-}
-
-nav a {
-  margin-left: 15px;
+header a {
+  margin-left: 10px;
   text-decoration: none;
   color: black;
-  font-weight: bold;
-  transition: 0.2s;
 }
 
-nav a:hover {
-  transform: scale(1.1);
-}
-
-/* =========================
-   LAYOUT
-========================= */
 .main {
   display: flex;
   height: calc(100vh - 60px);
 }
 
-/* =========================
-   ROOMS SIDEBAR
-========================= */
 .rooms {
-  width: 220px;
+  width: 200px;
   background: #111;
-  padding: 15px;
-
-  border-right: 2px solid #ff00aa33;
+  padding: 10px;
 }
 
 .rooms button {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 12px;
-
-  border: none;
-  cursor: pointer;
-
+  margin: 5px 0;
+  padding: 10px;
   background: #1a1a1a;
   color: white;
-
-  border-left: 4px solid transparent;
-  transition: 0.2s;
+  border: none;
 }
 
-.rooms button:hover {
-  border-left: 4px solid #ff00aa;
-  transform: translateX(3px);
-}
-
-/* =========================
-   CHAT AREA
-========================= */
 .chat {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Nachrichten Box */
 #chat {
   flex: 1;
-  padding: 15px;
+  padding: 10px;
   overflow-y: auto;
 }
 
-/* Message Bubble */
 .message {
   background: #15151a;
-  margin-bottom: 10px;
-  padding: 10px 12px;
-
+  margin: 8px;
+  padding: 10px;
   border-left: 4px solid #00ffcc;
-  border-radius: 6px;
-
-  animation: pop 0.15s ease;
 }
 
-.message b {
-  color: #ff00aa;
-}
-
-/* =========================
-   INPUT BAR
-========================= */
 .input {
   display: flex;
-  border-top: 1px solid #222;
 }
 
 input {
   flex: 1;
-  padding: 12px;
-
+  padding: 10px;
   border: none;
-  outline: none;
-
   background: #0f0f14;
   color: white;
 }
 
 button {
-  padding: 12px 18px;
-
+  padding: 10px;
   border: none;
-  cursor: pointer;
-
-  background: linear-gradient(90deg, #ff00aa, #00ffcc);
+  background: #ff00aa;
   color: black;
-
   font-weight: bold;
-  transition: 0.2s;
-}
-
-button:hover {
-  filter: brightness(1.2);
-}
-
-/* =========================
-   ANIMATIONEN (CLEAN)
-========================= */
-@keyframes pop {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at 30% 40%, #ff00aa11, transparent 60%);
-  pointer-events: none;
 }
