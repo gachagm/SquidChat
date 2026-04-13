@@ -7,10 +7,10 @@
 
 <body>
 
-<div class="bg-animation"></div>
+<div class="bg"></div>
 
 <header>
-  <h1>🦑 SQUIDCHAT</h1>
+  <h1>🦑 SquidChat</h1>
   <nav>
     <a href="connect.html">connect</a>
     <a href="rules.html">rules</a>
@@ -19,33 +19,30 @@
 
 <div class="main">
 
-  <aside class="rooms">
-    <button onclick="switchRoom('lobby')">Lobby</button>
-    <button onclick="switchRoom('ranked')">Ranked</button>
-    <button onclick="switchRoom('fashion')">Fashion</button>
-    <button onclick="switchRoom('splatfest')">Splatfest</button>
-  </aside>
+  <div class="rooms">
+    <button onclick="switchRoom('lobby')">lobby</button>
+    <button onclick="switchRoom('ranked')">ranked</button>
+    <button onclick="switchRoom('fashion')">fashion</button>
+    <button onclick="switchRoom('splatfest')">splatfest</button>
+  </div>
 
-  <section class="chat">
+  <div class="chat">
 
     <div id="chat"></div>
 
     <div class="input">
       <input id="username" placeholder="Inkling Name">
-      <input id="msg" placeholder="Say something...">
-      <button onclick="send()">➤</button>
+      <input id="msg" placeholder="Message...">
+      <button onclick="send()">Send</button>
     </div>
 
-  </section>
+  </div>
 
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
-
-<script src="firebase.js"></script>
-<script src="app.js"></script>
+<script type="module" src="firebase.js"></script>
 <script src="ui.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
