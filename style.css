@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0a0a0a;
+  color: white;
+}
+
+.header {
+  background: linear-gradient(90deg, #ff00aa, #00ffcc);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  height: 90vh;
+}
+
+.sidebar {
+  width: 200px;
+  background: #111;
+  padding: 10px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #222;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat {
+  flex: 1;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.message {
+  background: #1a1a1a;
+  margin: 5px;
+  padding: 8px;
+  border-left: 4px solid #ff00aa;
+}
+
+.input-area {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  background: #ff00aa;
+  border: none;
+  color: white;
+}
